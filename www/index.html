@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+		
+		<script src="js/main.js" language="javascript"></script>
+		  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+		<script> 
+			$(document).ready(function() {
+                   showMainPage();
+            });
+		</script>
+</head>
+
+<body onload="javascript:setTimeout(initialShuffle,1000);">
+
+		<div id="canvas">
+			<!-- <div id="title"><img src="images/title.png"></div> -->
+			<figure class="title">
+  					<img id ="titlePic" src="Img/title.png" onclick="reload();">
+  		 </figure>
+    
+         <div id="pageOne">
+	
+			<figure class="title">
+				<img id="finalImage" src="Img/example.jpg" onclick="start();">
+			</figure>
+			
+			  <figure class="title">
+  					<img id ="startGame" src="Img/startGame.png" onclick="start();">
+  		      <figure>
+         </div>
+				
+			<!-- <div id="container">
+			    <strong id="press"><center>Press the image to start.</center></strong>
+			</div> -->
+			<div id="pageTwo">
+			<div id="main">
+				<div id="position0" class="pieces" onclick="javascript:move(0);"></div>
+				<div id="position1" class="pieces" onclick="javascript:move(1);"></div>
+				<div id="position2" class="pieces" onclick="javascript:move(2);"></div>
+				<div id="position3" class="pieces" onclick="javascript:move(3);"></div>
+				<div id="position4" class="pieces" onclick="javascript:move(4);"></div>
+				<div id="position5" class="pieces" onclick="javascript:move(5);"></div>
+				<div id="position6" class="pieces" onclick="javascript:move(6);"></div>
+				<div id="position7" class="pieces" onclick="javascript:move(7);"></div>
+				<div id="position8" class="pieces" onclick="javascript:move(8);"></div>
+				<div id="position9" class="pieces" onclick="javascript:move(9);"></div>
+				<div id="position10" class="pieces" onclick="javascript:move(10);"></div>
+				<div id="position11" class="pieces" onclick="javascript:move(11);"></div>
+				<div id="position12" class="pieces" onclick="javascript:move(12);"></div>
+				<div id="position13" class="pieces" onclick="javascript:move(13);"></div>
+				<div id="position14" class="pieces" onclick="javascript:move(14);"></div>
+				<div id="position15" class="pieces" onclick="javascript:move(15);"></div>			
+			</div>
+			
+			    <div id="toResult"></div>
+				
+				  <div id="stats" onclick="showMainPage();" >
+			          <h3 id="good">0</h3>
+			         <!--  -->
+			          <h3 id="badto">Correct: 0</h3>
+			       
+		          </div>
+		
+		           <figure class="title">
+  					<img id ="viewFinalImage" src="Img/viewImage.png" onclick="showMainPage();">
+  		         <figure>
+            </div>
+		       
+		</div>
+			
+</body>
+
+</html>

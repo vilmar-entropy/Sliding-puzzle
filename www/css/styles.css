@@ -1,0 +1,180 @@
+* {
+	border: 0;
+	margin: 0;
+}
+body{
+	background-color: #dedede;
+}
+
+
+#main{
+	position: relative;
+	//top: 37%;
+	width: 98vw; //405px;
+	height: 98vw;; //405px;
+}
+
+
+#top{
+	position: relative;
+	width: 100%;
+	height: 20%;
+	margin: 25px auto;
+	text-align: left;
+}
+
+figure.title {
+	position: relative;
+    text-align: center; /* center the image */
+    margin: 0.01em;
+}
+figure.title #titlePic {
+	border-radius: 8px;
+	position: relative;
+    display: inline-block;  /* treat the img like text */
+    max-width: 70%; /*resolution of the img*/
+    width: 70%; /* shrink to 100% if lower than 60px */
+   margin: 1em;  /* add space between top and bottom edge of container */
+}
+
+figure.title #startGame {
+	border-radius: 8px;
+	position: relative;
+    display: inline-block;  /* treat the img like text */
+    max-width: 50%; /*resolution of the img*/
+    width: 50%; /* shrink to 100% if lower than 60px */
+   margin: 2em;  /* add space between top and bottom edge of container */
+}
+
+figure.title #finalImage{
+	border-radius: 8px;
+	background-color: #ffffff;
+	position: relative;
+    display: inline-block;  /* treat the img like text */
+    max-width: 98%; /*resolution of the img*/
+    width: 98%; /* shrink to 100% if lower than 60px */
+   margin: 0.01em auto;  /* add space between top and bottom edge of container */
+}
+
+figure.title #viewFinalImage{
+	border-radius: 8px;
+	position: relative;
+    display: inline-block;  /* treat the img like text */
+    max-width: 95%; /*resolution of the img*/
+    width: 95%; /* shrink to 100% if lower than 60px */
+   margin: 0.01em auto;  /* add space between top and bottom edge of container */
+}
+
+
+ #container{
+	position: absolute;
+	left: 25%;
+	
+	//float: right;
+	border-radius: 7px;
+	background-color: #ffffff;
+	overflow: hidden;
+	width: 50%;
+	//height: 100%;
+	-webkit-box-shadow: 3px 3px 3px 0;
+	//margin-left: 20px;
+	margin: 1em auto;
+}
+bottom{
+	position: relative;
+	width: 728px;
+	height: 90px;
+	margin: 25px auto;
+	text-align: center;
+}
+.pieces{
+	position:absolute;
+	width: 24.5vw;
+	height: 24.5vw;
+	cursor: pointer;
+	border-radius: 4px;
+	//overflow: hidden;
+	-webkit-box-shadow: 3px 3px 3px 0;
+	background-color: #ffffff;
+}
+
+.pcs {
+    width: 24.5vw;
+	height: 24.5vw;
+}
+
+#position0,#position1,#position2,#position3{
+	top:1vw; //1px;
+}
+#position4,#position5,#position6,#position7{
+	top: 25.5vw; //102px;
+}
+#position8,#position9,#position10,#position11{
+	top:50vw; //203px;
+}
+#position12,#position13,#position14,#position15{
+	top:74.5vw; //304px;
+}
+#position0,#position4,#position8,#position12{
+	left:1vw; //1px;
+}
+#position1,#position5,#position9,#position13{
+	left:25.5vw; //102px;
+}#position2,#position6,#position10,#position14{
+	left:50vw; //203px;
+}
+#position3,#position7,#position11,#position15{
+	left:74.5vw; //304px;
+}
+
+#stats {
+width: 98vw;
+padding: 5vw auto ;
+background:#DCDCDC;
+margin: 5vw auto;
+}
+
+#good  {
+float: left; 
+left: 1vw;
+width: 33vw;
+text-align:center;
+margin: 0px;
+
+
+}
+
+#timer {
+float: left; 
+left: 34vw;
+width: 33vw; 
+text-align: center;
+margin: 0px;
+}
+
+#badto  {
+float: left; 
+left: 67vw;
+width: 34vw;
+text-align:center;
+margin: 0px;
+
+
+}
+
+#stats:active, #titlePic:active, #startGame:active, #viewFinalImage:active, #finalImage:active{
+     background-color: #999999;
+}
+
+#startGame, #titlePic {
+	position: absolute;
+     padding: 1em auto;
+     margin: 1em auto;
+}
+
+//canvas {
+	position: absolute;
+    top: 50vh;
+    transform: translateY(-50vh);
+}
+
